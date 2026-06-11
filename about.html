@@ -41,7 +41,6 @@
 
     .site-header {
       display: flex;
-      justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 54px;
     }
@@ -58,6 +57,7 @@
       display: flex;
       gap: 34px;
       align-items: center;
+      margin-left: auto;
       padding-top: 4px;
     }
 
@@ -168,4 +168,86 @@
         margin-bottom: 38px;
       }
 
-      .bra
+      .brand {
+        font-size: 2.3rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        margin-left: 0;
+      }
+
+      .about-copy h1 {
+        font-size: clamp(2.7rem, 10vw, 4rem);
+      }
+
+      .about-copy p {
+        font-size: 1rem;
+      }
+
+      .contact-row a {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+        word-break: break-word;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a href="index.html" class="brand">Nicki Fung Acupuncture</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="clinics.html">Clinic Locations</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="about-grid">
+      <div class="about-copy">
+        <h1>Balanced Healing, Rooted in Tradition</h1>
+
+        <p>
+          Nicki is an acupuncturist who offers thoughtful, individualized care grounded
+          in Traditional Chinese Medicine. With a strong interest in stress, anxiety and
+          pain management, she brings both clinical skill and a gentle, compassionate
+          approach to every treatment.
+        </p>
+
+        <p>
+          Her path into Chinese medicine began in 2000 after meeting a TCM doctor in Hong
+          Kong who became her Qigong teacher. Over the years, she saw firsthand how he helped
+          hundreds of people improve their health. Later, when her infant son developed eczema,
+          Nicki turned to TCM for his care, deepening her belief in its effectiveness. When the
+          opportunity arose to change careers, she felt called to pursue Chinese medicine so she
+          could help others in the same way.
+        </p>
+
+        <p>
+          Nicki graduated from the Tzu Chi International College of Traditional Chinese Medicine
+          in Vancouver and continues to expand her clinical knowledge through ongoing mentorship
+          with experienced practitioners in London and Hong Kong.
+        </p>
+
+        <p>
+          Nicki believes that healing is most effective in a calm, respectful, and welcoming
+          environment where patients feel seen and supported. She tailors each treatment to the
+          individual, drawing on acupuncture as well as complementary therapies such as cupping,
+          gua sha, tuina, and moxibustion.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="headshot.jpg" alt="Photo of Nicki Fung">
+      </div>
+    </section>
+
+    <div class="contact-row">
+      <a href="mailto:nicki.fung+tcm@gmail.com">Email: nicki.fung+tcm@gmail.com</a>
+    </div>
+  </main>
+</body>
+</html>

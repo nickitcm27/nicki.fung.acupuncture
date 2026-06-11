@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nicki Fung Acupuncture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #efefef;
+      --text: #332d2d;
+      --muted: #6a6464;
+      --border: #6f6767;
+      --button: #342d2d;
+      --button-text: #ffffff;
+      --max-width: 1520px;
+      --radius-pill: 999px;
+      --radius-field: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 28px 60px;
+      min-height: 100vh;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 34px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      margin-left: auto;
+      padding-top: 4px;
+    }
+
+    .nav a {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1px;
+      background: var(--text);
+    }
+
+    .contact-image {
+      margin-bottom: 42px;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .contact-content {
+      max-width: 760px;
+    }
+
+    .contact-intro {
+      margin-bottom: 42px;
+    }
+
+    .contact-intro p {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .contact-form {
+      max-width: 670px;
+    }
+
+    .field-group {
+      margin-bottom: 26px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .required {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-left: 6px;
+    }
+
+    .name-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .sub-label {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-field);
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      padding: 13px 18px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 112px;
+      resize: vertical;
+      border-radius: 28px;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--text);
+    }
+
+    .send-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 92px;
+      padding: 18px 36px;
+      border: none;
+      border-radius: 999px;
+      background: var(--button);
+      color: var(--button-text);
+      font-size: 1.05rem;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 20px 20px 36px;
+      }
+
+      .site-header {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 34px;
+      }
+
+      .brand {
+        font-size: 2.3rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        margin-left: 0;
+      }
+
+      .contact-image img {
+        height: 260px;
+      }
+
+      .name-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <a href="index.html" class="brand">Nicki Fung Acupuncture</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="clinics.html">Clinic Locations</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <div class="contact-image">
+      <img src="waterfall.jpg" alt="Calm wellness treatment room with folded towel, tea, and natural materials">
+    </div>
+
+    <section class="contact-content">
+      <div class="contact-intro">
+        <p>
+          Fill out the quick form below and tell us a bit about how we can support your
+          wellness journey. We’ll get back to you within one business day so we can start
+          working together toward your health goals. Thanks for choosing us!
+        </p>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+        <div class="field-group">
+          <label class="field-label">Name</label>
+
+          <div class="name-row">
+            <div>
+              <label class="sub-label" for="first-name">First Name <span class="required">(required)</span></label>
+              <input type="text" id="first-name" name="first_name" required>
+            </div>
+
+            <div>
+              <label class="sub-label" for="last-name">Last Name <span class="required">(required)</span></label>
+              <input type="text" id="last-name" name="last_name" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="email">Email <span class="required">(required)</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="message">Message <span class="required">(required)</span></label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">SEND</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

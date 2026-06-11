@@ -1,13 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My First Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicki Fung Acupuncture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #efefef;
+      --text: #2f2929;
+      --max-width: 1520px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 28px 40px;
+      min-height: 100vh;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 34px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      margin-left: auto;
+      padding-top: 4px;
+    }
+
+    .nav a {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1px;
+      background: var(--text);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 78vh;
+      min-height: 420px;
+      max-height: 820px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 20px 20px 30px;
+      }
+
+      .site-header {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+
+      .brand {
+        font-size: 2.3rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        margin-left: 0;
+      }
+
+      .hero-image img {
+        height: 48vh;
+        min-height: 260px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Nicki Fung Acupuncture</h1>
-    <p>Welcome to Nicki Fung's Acupuncture Practice</p>
-    <p><a href="clinics.html">Go to Clinics Page</a></p>
-     <p><a href="about.html">Go to About Page</a></p>
+  <main class="page">
+    <header class="site-header">
+      <a href="index.html" class="brand">Nicki Fung Acupuncture</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="clinics.html">Clinic Locations</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero-image">
+      <img src="waterfall.jpg" alt="Calm zen-inspired wellness space">
+    </section>
+  </main>
 </body>
 </html>

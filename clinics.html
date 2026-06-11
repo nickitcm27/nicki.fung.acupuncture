@@ -37,7 +37,46 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 40px 40px 80px;
+      padding: 18px 40px 80px;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 54px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      margin-left: auto;
+      padding-top: 4px;
+    }
+
+    .nav a {
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1px;
+      background: var(--text);
     }
 
     .locations-grid {
@@ -132,7 +171,7 @@
       }
 
       .page {
-        padding: 28px 22px 56px;
+        padding: 20px 22px 56px;
       }
 
       .logo-wrap {
@@ -149,12 +188,40 @@
         max-width: 360px;
       }
     }
+
+    @media (max-width: 760px) {
+      .site-header {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 38px;
+      }
+
+      .brand {
+        font-size: 2.3rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
   <main class="page">
-    <section class="locations-grid">
+    <header class="site-header">
+      <a href="index.html" class="brand">Nicki Fung Acupuncture</a>
 
+      <nav class="nav" aria-label="Main navigation">
+        <a href="clinics.html" class="active">Clinic Locations</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="locations-grid">
       <article class="location-card">
         <div class="logo-wrap">
           <img src="Trikinetic-logo.png" alt="Trikinetic logo">
@@ -190,7 +257,7 @@
 
       <article class="location-card">
         <div class="logo-wrap">
-          <img src="Foundation-logo.jpeg" alt="Foundation Psychology & Health logo">
+          <img src="Foundation-logo.jpeg" alt="Foundation Psychology &amp; Health logo">
         </div>
 
         <div class="booking-wrap">
@@ -220,7 +287,6 @@
           </p>
         </div>
       </article>
-
     </section>
   </main>
 </body>
