@@ -1,0 +1,231 @@
+Yes — below is a clean HTML file that recreates the same general layout: two side-by-side clinic cards with logos at the top, rounded booking buttons, large serif headings, descriptive text, and links underneath. I’m basing this on the screenshot you attached, which shows a two-column comparison-style layout with a light gray background, centered top branding, pill buttons, and text blocks below.
+
+HTML
+xml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinic Locations Layout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f3f3f3;
+      --text: #2f2a2a;
+      --muted: #4f4a4a;
+      --button: #2f2626;
+      --button-text: #ffffff;
+      --card-gap: 64px;
+      --radius-pill: 999px;
+      --max-width: 1400px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 40px 80px;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--card-gap);
+      align-items: start;
+    }
+
+    .location-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo-wrap {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 34px;
+      overflow: hidden;
+    }
+
+    .logo-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .booking-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+
+    .book-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 310px;
+      padding: 22px 36px;
+      border-radius: var(--radius-pill);
+      background: var(--button);
+      color: var(--button-text);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .book-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .location-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 42rem;
+    }
+
+    .content p strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .content a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-word;
+    }
+
+    @media (max-width: 980px) {
+      .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 72px;
+      }
+
+      .page {
+        padding: 28px 22px 56px;
+      }
+
+      .logo-wrap {
+        height: 200px;
+      }
+
+      .booking-wrap {
+        justify-content: flex-start;
+      }
+
+      .book-btn {
+        min-width: 260px;
+        width: 100%;
+        max-width: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="locations-grid">
+
+      <article class="location-card">
+        <div class="logo-wrap">
+          <img src="trikinetic-logo.png" alt="Trikinetic logo">
+        </div>
+
+        <div class="booking-wrap">
+          <a class="book-btn" href="#" target="_blank" rel="noopener noreferrer">
+            Book Nicki @ Trikinetic
+          </a>
+        </div>
+
+        <div class="content">
+          <h2>Trikinetic Massage Therapy</h2>
+
+          <p>
+            Trikinetic provides expert massage &amp; acupuncture services in
+            E. Vancouver (corner of E. Broadway &amp; Commercial Drive).
+          </p>
+
+          <p><strong>Address:</strong> 2555 Commercial Drive, Suite #203, East Vancouver.</p>
+
+          <p><strong>Phone number:</strong> +1-604-879-9400</p>
+
+          <p>Nicki provides acupuncture at Trikinetic on <strong>Wednesdays</strong>.</p>
+
+          <p>
+            <a href="https://trikinetic.ca/services/acupuncture" target="_blank" rel="noopener noreferrer">
+              https://trikinetic.ca/services/acupuncture
+            </a>
+          </p>
+        </div>
+      </article>
+
+      <article class="location-card">
+        <div class="logo-wrap">
+          <img src="foundation-" alt="Foundation Psychology & Health logo">
+        </div>
+
+        <div class="booking-wrap">
+          <a class="book-btn" href="#" target="_blank" rel="noopener noreferrer">
+            Book Nicki @ Foundation
+          </a>
+        </div>
+
+        <div class="content">
+          <h2>Foundation Psychology &amp; Health</h2>
+
+          <p>
+            Foundation provides psychological &amp; acupuncture support for adults
+            facing stress, trauma, and change in N. Vancouver (Lynn Valley).
+          </p>
+
+          <p><strong>Address:</strong> 306-1200 Lynn Valley Road, North Vancouver.</p>
+
+          <p><strong>Phone number:</strong> +1-236-466-2212</p>
+
+          <p>Nicki provides acupuncture at Foundation Health on <strong>Tuesdays</strong>.</p>
+
+          <p>
+            <a href="https://www.foundationpsychology.ca/team" target="_blank" rel="noopener noreferrer">
+              https://www.foundationpsychology.ca/team
+            </a>
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>
